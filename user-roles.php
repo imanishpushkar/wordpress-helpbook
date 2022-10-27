@@ -41,8 +41,7 @@ $wp_roles->remove_role('new_role');
 /*
 using conditions
 */
-<?php global $user_login, 
-$current_user; wp_get_current_user(); 
+<?php global $user_login, $current_user; wp_get_current_user(); 
 $user_info = get_userdata($current_user->ID); 
 $roles = array ( 'administrator', 'yith_vendor', 'waiter', ); 
 if (is_user_logged_in() && array_intersect( $roles, $user_info->roles)):?>
